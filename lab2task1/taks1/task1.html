@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="1.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#signup").click(function(){
+    $(".Spage").slideDown();
+  });
+  $("#login").click(function(){
+    $(".Spage").slideUp();
+  });
+
+});
+</script>
+</head>
+<body>
+ <div class="container">
+<div class="switch"><span id="signup">sign up</span> <span>/</span><span id="login">login</span></div>
+
+<div class="Spage">
+   <br> <h1 >&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;sign up</h1>
+   <input placeholder="email"><br>
+   <input placeholder="password"><br>
+   <input placeholder="A"><br>
+   <button>sign up!</button>
+</div>
+<div class="Lpage"><br>
+<h1> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;login !</h1>
+<input placeholder="email"><br>
+<input placeholder="password">
+<br><button>login</button>
+
+
+
+
+
+</div>
+
+
+</div>
+</body>
+
+
+
+
+
+

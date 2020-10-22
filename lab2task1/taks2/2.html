@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="2.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+ 
+
+</head>
+<body> <div class="container">
+    <h1>this is a window</h1>
+     <button> log out</button>
+  
+       <div class="notcomp">
+           <h3>not completed</h3>
+             
+            </div>
+             <h3>done</h3>
+         
+          <div class="comp">
+        
+         
+
+
+
+</div>
+
+<h3>get it done by others</h3>
+<div class="other">
+
+
+</div>
+    <div> <input class="txtb" type="text" placeholder="my new task" > </div> 
+    <button id="777">remove all </button>
+         </div>
+         
+
+
+
+</body>
+<script type="text/javascript">
+  $(".txtb").on("keydown",function (e) {//Press Enter to trigger，keycode == 13 mean enter
+        if(e.keyCode == 13  && $(".txtb").val() !="" ){
+            var task =$("<div class='task'></div>").text($(".txtb").val());
+            var completed =$(" <button class='completed'>√ </button>").click(function(){
+
+                var p=$(this).parent();
+p.fadeOut(function(){
+$(".comp").append(p);
+p.fadeIn();
+
+
+
+});
+
+
+
+$(this).remove();
+$(help).remove();
+
+
+            });
+            var del =$(" <button class='unfinished'>×</button>").click(function(){
+var p=$(this).parent();
+p.fadeOut(function(){
+p.remove();
+
+
+
+});
+
+
+
+
+
+            });
+
+
+
+            var help =$(" <button class='help'>！</button>").click(function(){
+
+                var p=$(this).parent();
+p.fadeOut(function(){
+$(".other").append(p);
+p.fadeIn();
+
+
+
+});
+
+
+
+$(this).remove();
+$(completed).remove();
+
+
+
+
+
+            });
+
+
+
+
+
+
+
+            task.append(completed,del,help);
+            task.before()
+
+$(".notcomp").append(task);
+$(".txtb").val("");
+
+
+        }
+        
+        var del =$(" #777").click(function(){
+var p=$(".other").children();
+ var x =$(".comp").children();
+p.fadeOut(function(){
+p.remove();
+x.remove();
+});
+
+});
+
+ })
+       </script>
+</html>
